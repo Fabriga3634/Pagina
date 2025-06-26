@@ -16,11 +16,15 @@ document.getElementById("abrirBtn").addEventListener("click", function () {
     frase.style.opacity = "1";
     contador.style.opacity = "1";
 
-    escribirFrase(`Tu compañía es algo que valoro más que nada en este mundo. Aprecio cada instante que paso contigo y disfruto muchísimo el tiempo que compartimos. Me haces feliz con tu sola presencia, y alegras mis días sin importar lo que haya pasado.
+    escribirFrase(`Tu compañía es algo que valoro más que nada en este mundo, cosita 💫. Aprecio cada instante que paso contigo ⏳💕 y disfruto muchísimo el tiempo que compartimos 🌸. Me hacés feliz con tu sola presencia 😊, y alegras mis días sin importar lo que haya pasado ☀️🌧️.
 
-Te agradezco de corazón por estar siempre, por tenerme en cuenta y por tu forma de ser tan especial. En tu día quiero desearte toda la felicidad que te merecés, y espero algún día poder retribuirte con la misma luz y alegría que vos trajiste a mi vida, muchas veces sin darte cuenta.
+Te agradezco de corazón ❤️ por estar siempre, por tenerme en cuenta y por tu forma de ser tan especial ✨. En tu día quiero desearte toda la felicidad que te merecés 🎁🎂, y espero algún día poder retribuirte con la misma luz y alegría 🌟 que vos trajiste a mi vida, muchas veces sin darte cuenta ❤️‍🩹.
 
-(Gracias por quedarte a mi lado. ¡Feliz cumpleaños!) 🎉💖`, frase);
+Y quiero que lo recuerdes siempre, cosita: aunque el mundo te dé la espalda… yo no. Y no importa si te contradicen o intentan hacerte sentir menos, voy a estar ahí. Incluso si todo parece ir en contra, voy a quedarme de tu lado. Siempre voy a cuidarte, sin importar lo que venga, aunque tenga que enfrentar lo que sea 🛡️⚔️💖.
+
+Gracias por quedarte a mi lado, cosita linda. ¡FELIZ CUMPLEAÑOS!!!!! 🎉💕
+
+`, frase);
     iniciarContador();
   }, 1500);
 });
@@ -42,7 +46,7 @@ function iniciarContador() {
 
   const intervalo = setInterval(() => {
     segundos--;
-    contador.textContent = `00:${segundos < 90 ? "0" + segundos : segundos}`;
+    contador.textContent = `00:${segundos < 10 ? "0" + segundos : segundos}`;
 
     // Últimos 5 segundos animación
     if (segundos <= 5) {
