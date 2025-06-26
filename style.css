@@ -1,0 +1,192 @@
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #fce4ec;
+  font-family: 'Verdana', sans-serif;
+}
+
+.carta-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.sobre {
+  width: 220px;
+  height: 140px;
+  position: relative;
+  perspective: 1000px;
+  margin: 0 auto 20px;
+}
+
+.sobre .tapa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: pink;
+  border: 2px solid #d81b60;
+  border-radius: 10px;
+  transform-origin: top;
+  transition: transform 1.5s ease-in-out;
+  z-index: 2;
+}
+
+.sobre .papel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 2px solid #d81b60;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.sobre.abierto .tapa {
+  transform: rotateX(-180deg);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ec407a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #d81b60;
+}
+
+.oculto {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#fraseContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fce4ec;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.frase {
+  font-size: 20px;
+  color: #880e4f;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 25px 30px;
+  max-width: 700px;
+  margin-top: 20px;
+  border-radius: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  white-space: pre-line;
+  box-shadow: 0 0 10px rgba(136, 14, 79, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+
+.contador {
+  font-size: 28px;
+  color: #ad1457;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ad1457;
+}
+
+#contenidoFinal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+#contenidoFinal::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: transparent;
+  box-shadow:
+    0 0 2px #fff, 50px 100px 2px #fff, 100px 200px 2px #fff,
+    150px 300px 2px #fff, 200px 400px 2px #fff, 250px 500px 2px #fff,
+    300px 600px 2px #fff, 350px 700px 2px #fff, 400px 800px 2px #fff;
+  animation: estrellas 100s linear infinite;
+  z-index: 0;
+}
+
+@keyframes estrellas {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200px);
+  }
+}
+
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+p {
+  margin: 0 auto;
+  position: absolute;
+  font: 16px Verdana;
+  color: #d11d1d;
+  width: 100%;
+  top: 90%;
+  text-align: center;
+  text-shadow: 0 0 2px white;
+}
+
+p a {
+  text-decoration: none;
+  color: #e46e6e;
+}
+
+span {
+  font-size: 20px;
+}
+
+.temblor {
+  animation: shake 0.5s infinite, grow 5s ease-in forwards;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes grow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.5); }
+}

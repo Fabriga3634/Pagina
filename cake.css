@@ -1,0 +1,158 @@
+#tortaContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.torta-v2 {
+  position: relative;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadein 1.5s ease forwards;
+}
+
+.capa {
+  width: 100%;
+  height: 40px;
+  background: #a0522d;
+  border-radius: 20px;
+  margin: 4px 0;
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.3);
+}
+
+.capa-base { background: #5d2e10; }
+.capa-media { background: #8b4513; }
+.capa-top { background: #a0522d; }
+
+.crema, .crema-superior {
+  width: 90%;
+  height: 15px;
+  background: #fff0f5;
+  border-radius: 10px;
+  margin-top: -10px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.crema-superior {
+  width: 100%;
+  height: 20px;
+  background: #ffe4e1;
+  border-radius: 15px 15px 10px 10px;
+  margin-bottom: 5px;
+}
+
+.frutillas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: -10px;
+}
+
+.frutilla {
+  width: 20px;
+  height: 25px;
+  background: radial-gradient(circle at 30% 30%, #ff4c4c, #b22222);
+  border-radius: 50% 50% 40% 40%;
+  position: relative;
+}
+
+.frutilla::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 10px;
+  background: green;
+  border-radius: 50%;
+}
+
+.velas {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: -40px;
+}
+
+.vela {
+  width: 8px;
+  height: 30px;
+  background: #ff69b4;
+  border-radius: 2px;
+  position: relative;
+}
+
+.fuego {
+  width: 10px;
+  height: 15px;
+  background: orange;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flame 0.4s infinite alternate ease-in-out;
+}
+
+@keyframes flame {
+  0% { transform: translateX(-50%) scale(1); opacity: 1; }
+  100% { transform: translateX(-50%) scale(1.3); opacity: 0.85; }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.base-plato {
+  width: 240px;
+  height: 15px;
+  background: #ccc;
+  border-radius: 10px;
+  margin-bottom: -10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.globos {
+  position: absolute;
+  top: -100px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.globo {
+  width: 40px;
+  height: 55px;
+  background: radial-gradient(circle at 30% 30%, #ff5e7e, #e91e63);
+  border-radius: 50% 50% 45% 45%;
+  transform: rotate(-45deg);
+  position: relative;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.globo::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: gray;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0) rotate(-45deg); }
+  50% { transform: translateY(-10px) rotate(-45deg); }
+}

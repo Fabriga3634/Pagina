@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cumpleaños!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cake.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+
+<!-- Vista inicial: Carta + Botón -->
+<div class="carta-container" id="cartaContainer">
+  <div class="sobre" id="sobre">
+    <div class="tapa"></div>
+    <div class="papel"></div>
+  </div>
+  <button id="abrirBtn">Abrir</button>
+</div>
+
+<!-- Frase con contador -->
+<div id="fraseContainer" class="oculto">
+  <div class="contador">00:90</div>
+  <div class="frase"></div>
+</div>
+
+<!-- Torta animada -->
+<!-- Torta mejorada con globos ❤️ -->
+<div id="tortaContainer" class="oculto">
+  <div class="globos">
+    <div class="globo corazon"></div>
+    <div class="globo corazon"></div>
+  </div>
+
+  <div class="torta-v2">
+    <div class="base-plato"></div>
+
+    <div class="capa capa-base"></div>
+    <div class="crema crema1"></div>
+
+    <div class="capa capa-media"></div>
+    <div class="crema crema2"></div>
+
+    <div class="capa capa-top"></div>
+    <div class="crema-superior"></div>
+
+    <div class="frutillas">
+      <div class="frutilla"></div>
+      <div class="frutilla"></div>
+      <div class="frutilla"></div>
+    </div>
+
+    <div class="velas">
+      <div class="vela"><div class="fuego"></div></div>
+      <div class="vela"><div class="fuego"></div></div>
+      <div class="vela"><div class="fuego"></div></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Efecto final -->
+<div id="contenidoFinal" class="oculto">
+  <canvas id="c"></canvas>
+  <p>Con mucho mucho cariño <span>, BY <a>FABRY</a></span></p>
+</div>
+
+<audio id="sonidoPapel" src="papel.mp3"></audio>
+
+<script src="efectoCarta.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
