@@ -20,8 +20,6 @@ document.getElementById("abrirBtn").addEventListener("click", function () {
 
 Te agradezco de corazón ❤️ por estar siempre, por tenerme en cuenta y por tu forma de ser tan especial ✨. En tu día quiero desearte toda la felicidad que te merecés 🎁🎂, y espero algún día poder retribuirte con la misma luz y alegría 🌟 que vos trajiste a mi vida, muchas veces sin darte cuenta ❤️‍🩹.
 
-Y quiero que lo recuerdes siempre, cosita: aunque el mundo te dé la espalda… yo no. Y no importa si te contradicen o intentan hacerte sentir menos, voy a estar ahí. Incluso si todo parece ir en contra, voy a quedarme de tu lado. Siempre voy a cuidarte, sin importar lo que venga, aunque tenga que enfrentar lo que sea 🛡️⚔️💖.
-
 Gracias por quedarte a mi lado, cosita linda. ¡FELIZ CUMPLEAÑOS!!!!! 🎉💕
 
 `, frase);
