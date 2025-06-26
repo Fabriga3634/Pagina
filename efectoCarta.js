@@ -36,13 +36,13 @@ function escribirFrase(texto, elemento, velocidad = 50) {
 }
 
 function iniciarContador() {
-  let segundos = 10;
+  let segundos = 90;
   const contador = document.querySelector(".contador");
   const frase = document.querySelector(".frase");
 
   const intervalo = setInterval(() => {
     segundos--;
-    contador.textContent = `00:${segundos < 10 ? "0" + segundos : segundos}`;
+    contador.textContent = `00:${segundos < 90 ? "0" + segundos : segundos}`;
 
     // Últimos 5 segundos animación
     if (segundos <= 5) {
