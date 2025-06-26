@@ -38,7 +38,7 @@ function escribirFrase(texto, elemento, velocidad = 50) {
 }
 
 function iniciarContador() {
-  let segundos = 90;
+  let segundos = 60;
   const contador = document.querySelector(".contador");
   const frase = document.querySelector(".frase");
 
